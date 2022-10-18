@@ -4,8 +4,18 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    background: linear-gradient(rgb(2, 2, 65), rgb(71, 71, 130));
 }
-.mainColor{
-    display: table;
+input{
+    padding: 5px;
+}
+.text{
+    width: 45%;
+}
+
+.num{width: 24%;}
+
+h1{text-align: center; color: white;}
+.mainColor input:hover{
+    background-color: white;
 }
