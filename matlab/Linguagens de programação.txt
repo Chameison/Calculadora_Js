@@ -1,0 +1,173 @@
+Matlab é derivado de Matriz laoratory, que é Laboratorio de Matriez. O intuido do desenvolvimento sempre foi facilitar a programação matemática com acesso direto a algoritmos envolvendo a álgebra linear. Com o tempo claro, tornou-se um dos principais softwares para modelagem e simulação de sistemas dinâmicos em Engenharia e Ciências exatas. 
+
+Funções e Comandos Básicos:
+
+Command Window (Janela de comando ) * Print da tela
+>Janela onde os comandos  para o program serão feitos. Esses comandos são relizados instantaneamente. Essas operações não são salvas, elas servem como teste e em seguida pode ser armazenadas no script
+
+Workspace(Área de Trabalho) Nesse local as varíaveis salvas aparecem. O MATLAB salva as váriaveis escritas na janela de comando automaticamente tal comoseu valor e classe.
+
+Current Folder(Pasta Atual) Mostra a pasta que esta sendo acessada no momento.
+
+clc - limpa a tela 
+a extensão dos programas salvos possuem ".m"
+
+
+
+2.0 Linha de comando
+a linha de comando é a linha onde as operações são realizada; 
+
+Comandos básicos =
+Adição . + 
+Subtra . -
+Multip . *
+Divisa . /
+potenc . ^
+As operações feitas seguem a ordem: Potencia¸c˜ao, Multiplica¸c˜ao e Divis˜ao, Adi¸c˜ao e
+Subtra¸c˜ao.
+
+A primeira coisa que devemos colocar em mente quando estamos aprendendo MATLAB é que todas as váriaveis são vetores multidimensionais, independente da classe de dados. A matriz é um vetor de duas dimensões, por exemplo.
+
+Podemos criar de forma simples um vetor. Apenas declarando da seguinte forma:
+>>a = [1 2 3] - podemos usar o espaço ou a virgula para separar os elementos
+
+Para criar uma matriz, separamos as linhas com ponto e virgula. Declaramos por exemplo uma matriz 3x3 da seguinte forma:
+>>A = [1 2 3; 4 5 6; 7 8 9;]
+
+Aqui como temos as funções da propria linguagem para facilitar essa manipulação. Podemos utulizar os comandos ones(para vetores unitario), zeror(para criar vetor nulo) rand(criar numeros aleatorios entre 0 e 1) e o randi(criar numeros inteiros aleatorios). Nessas funções, o primeiro numero é o numero de linhas e o segundo é o numeto de colunas.
+ex:
+B = ones(5, 1)
+
+C = zeros(3, 3)
+
+D = rand(5, 5)
+
+3.0 - Operações com matrizes e vetores
+Aqui temos mais um diferencial para outras linguagens, que vem justamente das bibliotecas desenvolvidas com o intuito de facilitar essa manipulação de vetores e matrizes.
+EXEMPLO, temos A = [2, 4, 5; 6, 8, 9; 1, 2, 0]
+>>A + 10
+=
+
+enquanto no c por exemplo para calculamo uma transposta temos que fazer essa quantidade de codigos, aqui apenas usando apóstofre(') voce consegue a transposta da matriz desejada:
+>>A'
+
+Podemos ainda achar uma matriz inversa atraves do comando inv(A)
+O prodito entre matrizes é simplesnte A * B, claro que sendo possivel.
+
+Para multiplicar elemento a elemento, usamos o operador ".*"
+
+>>A.*B
+
+*Podemos contatenar vetores de forma simples utilizando os colchetes;
+ex: A = [1 3 5 7] --- Utilizamos o mesmo metodo para contatenar matrizes
+B = [2 4 6 8]
+a = [A, B]
+a =
+1 2 3 1 2 3
+
+COMANDOS:
+max - retorna ovalor máximo dentro de um vetor ou matriz.
+a = [ 3 6 7]
+b = [ 1 4 5]
+max(a)
+max(a, b) retorna um vetor com valores mais alto de a e b
+
+Tabela - funções matriciais
+
+
+eig     Autovalores e autovetores
+inv     Inversa
+expm    Matriz exponencial
+det     Determinante
+size    Tamanho da matriz
+lu      Fatoriza¸c˜ao triangular LU
+sqrtm   Matriz raiz quadrada
+poly    Polinˆomio caracter´ıstico
+diag(A) Elementos da diagonal principal
+[V D] = eig(A)        V: autovetores, D: autovalores
+
+As operações são claro muito uteis para tudo, inclusive construção de tabelas, como o exemplo a seguir: 
+
+n = (0:3)'
+n =
+
+0
+1
+2
+3
+
+p = [n n.^2 n.^3]
+p =
+0 0 0
+1 1 1
+2 4 8
+3 9 27
+
+podemos usar o comando format caso a gente queira mudar o formato que o numero é mostrando 
+format long
+format short
+
+Comando Descri¸c˜ao
+format short Mostra 4 casas ap´os a v´ırgula
+format long Mostra 15 casas ap´os a v´ırgula
+format short e Mostra 4 casas ap´os a v´ırgula com exponencial
+format long e Mostra 15 casas ap´os a v´ırgula com exponencial
+format short g Mostra 5 d´ıgitos
+format long g Mostra 15 d´ıgitos
+format hex Formato hexadecimal
+format bank Formato banc´ario
+format rat Formato racional
+
+help ou doc - ajuda 
+
+
+4.0 Texto e caracteres:
+declaramos da seguinte forma: 
+a = 'Ola, mundo' - ela é salva como char, claro
+podemos juntar duas strings, da seguinte forma
+a = 'Ola'
+b = 'Bom dia'
+c = [a, b]
+
+
+5.0 - Gráficos
+ 
+Comando   Descri¸c˜ao                        Exemplo
+plot      Gr´afico linear                    plot(x, y)
+ezplot    Grafico com variaveis simbolicas   ezplot(x, y)
+loglog    Grafico em escala logarıtmica      loglog(x, y)
+fill      Desenha polıgono 2D                fill(x, y, 'r')
+polar     Grafico em coordenadas polares     polar(x, y)
+bar       Grafico de barras                  bar(x, y)
+stem      Grafico em tempo discreto          tem(x, y)
+stairs    Grafico em degrau                  stairs(x, y)
+comet     Grafico com trajetoria de cometa   comet(x, y)
+ 
+
+
+
+###REDES NEURAIS 
+O que são redes neurais ? são sistemas da computação inspirados nas características do processamento de informação que estão presentes nos neurônios reais e suas caracteristicas de conexão.
+
+tendo o comportamento baseado nas redes neurais biológicas. 
+
+As redes neurais são compostas por um conjunto de neurônios artificiais que interagem entre si, elas tem a capacidade de coletar, aplicar e armazenar informações baseadas nos experimentos(dito também como aprendizagem) . Esse processo é feito atraves de algoritmmos de aprendizagem, onde os pesos de ajustes são ajustados de acordo com o resultado desejado. Esses pesos são ajustados enquanto a rede aprende.
+
+https://www.muriloleal.com.br/visao/repositorio/centec/eai/ia/REDES%20NEURAIS%20-%20APOSTILA.pdf
+https://pessoas.unifal-mg.edu.br/nelsonlemes/exemplo-do-uso-do-matlab-para-treinamento-de-uma-rede/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
